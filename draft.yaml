@@ -1,0 +1,21 @@
+models:
+  Post:
+    title: string:400
+    content: longtext
+    published_at: nullable timestamp
+
+controllers:
+  Post:
+    index:
+      query: all
+      respond: posts
+
+    store:
+      validate: title, content
+      save: post
+      respond: post
+
+    show:
+      respond: post
+
+seeders: Post
