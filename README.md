@@ -30,8 +30,8 @@ This is built with the help of a wide range of open source projects:
 
 Parody is still very much a work in progress. The following are features that are either currently in the works or planned to be added:
 
-- [] Authentication layer with Laravel Sanctum
-- [] Multiple project types set through an env value on the container
-- [] Testable email notifications with Mailtrap
-- [] Simplify Docker flow with a wrapper script
-- [] Adjust amount of seeded database items through env values
+- [ ] Authentication layer with Laravel Sanctum
+- [ ] Multiple project types set through an env value on the container
+- [ ] Testable email notifications with Mailtrap
+- [ ] Simplify Docker flow with a wrapper script
+- [ ] Adjust amount of seeded database items through env values
