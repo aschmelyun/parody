@@ -6,7 +6,7 @@ Create a fully-featured test API with authentication included, zero coding requi
 
 ## Documentation
 
-The only requirement needed for Parody is Docker. Follow [these instructions](https://docs.docker.com/get-started) to get started setting it up for your system, and then clone or download this repo on your machine of choice.
+The only requirement needed for Parody is Docker. Follow [these instructions](https://docs.docker.com/get-started) to get started setting it up for your system.
 
 After that, running the following command will create a basic test API at [localhost](http://localhost):
 
