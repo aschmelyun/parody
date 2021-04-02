@@ -50,12 +50,6 @@ RUN addgroup -g 1000 laravel && adduser -G laravel -g laravel -s /bin/sh -D lara
 
 RUN chown laravel:laravel /var/www/html
 
-RUN composer require --dev laravel-shift/blueprint
-
-ADD ./draft.yaml /var/www/html/draft.yaml
-
-ADD ./blueprint.php /var/www/html/config/blueprint.php
-
 VOLUME /var/www/html
 
 STOPSIGNAL SIGINT
@@ -68,4 +62,4 @@ ADD ./parody.sh /var/www/html/parody.sh
 
 RUN chmod +x /var/www/html/parody.sh
 
-CMD ["/bin/sh", "-c", "/var/www/html/parody.sh"]
+ENTRYPOINT ["/bin/sh", "-c", "/var/www/html/parody.sh"]
