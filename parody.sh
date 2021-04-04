@@ -4,6 +4,7 @@ SCAFFOLD="$1"
 
 if [ -z $SCAFFOLD ]
 then
+    echo -e "Scaffold option is empty, setting it to todo."
     SCAFFOLD="todo"
 fi
 
