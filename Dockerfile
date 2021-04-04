@@ -62,4 +62,4 @@ ADD ./parody.sh /var/www/html/parody.sh
 
 RUN chmod +x /var/www/html/parody.sh
 
-ENTRYPOINT ["/bin/sh", "-c", "/var/www/html/parody.sh"]
+ENTRYPOINT ["/bin/sh", "/var/www/html/parody.sh"]

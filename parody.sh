@@ -2,14 +2,15 @@
 
 SCAFFOLD="$1"
 
-if [ -z $SCAFFOLD ]
-then
+if [[ $# -eq 0 ]]; then
     echo -e "Scaffold option is empty, setting it to todo."
     SCAFFOLD="todo"
 fi
 
 if [ $SCAFFOLD == "todo" ] || [ $SCAFFOLD == "blog" ]; then
     SCAFFOLD="https://github.com/aschmelyun/parody-${SCAFFOLD}.git"
+else
+    SCAFFOLD="https://github.com/${SCAFFOLD}.git"
 fi
 
 echo -e "Scaffold is set to ${SCAFFOLD}."
@@ -26,7 +27,7 @@ mysql -u root -e "CREATE DATABASE laravel;"
 echo -e "Modifying the default DB_HOST in .env."
 sed -i 's/DB_HOST=127.0.0.1/DB_HOST=localhost/g' /var/www/html/.env
 
-echo -e "Getting API scaffold - "
+echo -e "Cloning the API scaffold."
 git clone $SCAFFOLD scaffold
 cp -afu ./scaffold/. /var/www/html/
 rm -rf ./scaffold
