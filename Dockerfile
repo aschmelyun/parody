@@ -46,6 +46,8 @@ RUN mysql_install_db --user=mysql --datadir=/var/lib/mysql --skip-test-db
 
 RUN composer create-project laravel/laravel .
 
+RUN composer require tymon/jwt-auth
+
 RUN addgroup -g 1000 laravel && adduser -G laravel -g laravel -s /bin/sh -D laravel
 
 RUN chown laravel:laravel /var/www/html
