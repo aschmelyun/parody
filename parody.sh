@@ -32,6 +32,9 @@ git clone $SCAFFOLD scaffold
 cp -afu ./scaffold/. /var/www/html/
 rm -rf ./scaffold
 
+echo -e "Running artisan jwt:secret."
+php /var/www/html/artisan jwt:secret
+
 echo -e "Running artisan migrate."
 php /var/www/html/artisan migrate
 
