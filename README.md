@@ -1,4 +1,4 @@
-![A cover image for the Parody package containing the command docker run -tip 80:8080 aschmelyun/parody:latest](/images/cover.png)
+![A cover image for the Parody package containing the command docker run -it aschmelyun/parody:latest](/images/cover.png)
 
 # Parody
 
@@ -11,7 +11,7 @@ The only requirement needed for Parody is Docker. Follow [these instructions](ht
 After that, running the following command will create a basic test API at [localhost](http://localhost):
 
 ```bash
-docker run -tip 80:8080 aschmelyun/parody:latest
+docker run -it aschmelyun/parody:latest
 ```
 
 The output of the server will be streamed to your console. You can prevent this by using the `-d` flag in the above command, and using `ctrl+c` will stop the container and bring down your API.

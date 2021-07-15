@@ -42,4 +42,4 @@ echo -e "Running seeders."
 php /var/www/html/artisan db:seed
 
 echo -e "Starting server."
-php /var/www/html/artisan serve --host=0.0.0.0 --port=8080
+php /var/www/html/artisan serve --host=0.0.0.0 --port=80

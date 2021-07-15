@@ -56,7 +56,7 @@ VOLUME /var/www/html
 
 STOPSIGNAL SIGINT
 
-EXPOSE 8080
+EXPOSE 80
 
 ADD ./supervisord.conf /etc/supervisord.conf
 
